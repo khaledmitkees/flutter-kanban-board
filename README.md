@@ -33,6 +33,8 @@ To run this project, you need to have:
 * Delete a task.
 * Add a task
 * Add a board
+* Export to csv
+* See completed tasks
 * Crashlytics 
 * Google Analytics 
 * Localization [en, de]
