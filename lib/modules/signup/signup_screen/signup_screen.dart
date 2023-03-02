@@ -10,6 +10,11 @@ import 'package:flutter_kanban_board/modules/signup/signup_bloc/signup_state.dar
 import 'package:flutter_kanban_board/modules/signup/signup_bloc/signup_submission_state.dart';
 import 'package:flutter_kanban_board/utils/alerts.dart';
 import '../../../utils/assets_helper.dart';
+import '../../kanban_board/bloc/kanban_board_bloc.dart';
+import '../../kanban_board/bloc/kanban_board_event.dart';
+import '../../kanban_board/models/mock_model.dart';
+import '../../kanban_board/presentation/kanban_board_screen.dart';
+import '../../kanban_board/repos/kanban_repos.dart';
 
 class SignUpScreen extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
@@ -34,7 +39,24 @@ class SignUpScreen extends StatelessWidget {
     return BlocListener<SignUpBloc, SignUpState>(
       listener: (context, state) {
         final formState = state.state;
-        if (formState is SubmissionSuccess) {}
+        if (formState is SubmissionSuccess) {
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) {
+                  return BlocProvider(
+                    create: (_) {
+                      final bloc = KanbanBloc(MockBoardsData(), KanbanRepo());
+                      bloc.add(const KanbanEvent.getBoards());
+                      return bloc;
+                    },
+                    child: const KanbanBlocPage(),
+                  );
+                },
+              ),
+            );
+          });
+        }
         if (formState is SubmissionFailed) {
           OkAlert(title: "Error", message: formState.exception.toString())
               .show(context);
