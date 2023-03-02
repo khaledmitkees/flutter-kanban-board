@@ -1,0 +1,12 @@
+{
+  "boards_title": "SC Board",
+  "generic_error_msg": "Something went wrong",
+  "update": "Update!",
+  "app_needs_update": "App needs to be updated",
+  "email": "Email",
+  "password": "Password",
+  "sign_in": "Sign in",
+  "sign_up": "Sign up",
+  "sign_up_username_error": "Username not valid",
+  "sign_up_password_error": "password not valid"
+}
