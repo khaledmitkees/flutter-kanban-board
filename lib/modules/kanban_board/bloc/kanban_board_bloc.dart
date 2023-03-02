@@ -1,3 +1,4 @@
+import 'package:flutter_kanban_board/modules/completed_tasks/completed_tasks.dart';
 import 'package:flutter_kanban_board/modules/kanban_board/repos/kanban_repos.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter_kanban_board/modules/kanban_board/models/board_model.dart';
@@ -68,7 +69,9 @@ class KanbanBloc extends Bloc<KanbanEvent, KanbanState> {
         );
       }, addTask: (column, title) {
         final updatedColumns = currentState.copyWith().boards;
-        updatedColumns[column].children.add(Task(title: title));
+        updatedColumns[column].children.add(Task(
+            title: title,
+            startDate: DateTime.now().string('dd/MM/yy - kk:mm')));
         final newState = state.copyWith(
             boards: List.of(updatedColumns), status: Status.loaded);
         emit(newState);

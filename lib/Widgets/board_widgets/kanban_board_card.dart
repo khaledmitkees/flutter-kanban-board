@@ -3,6 +3,7 @@ import 'package:flutter_kanban_board/Widgets/board_widgets/board_card.dart';
 import 'package:flutter_kanban_board/Widgets/board_widgets/task_card.dart';
 import 'package:flutter_kanban_board/modules/kanban_board/models/board_model.dart';
 import 'package:flutter_kanban_board/modules/kanban_board/models/task_data.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class KanbanBoardCard extends StatelessWidget {
   final Board boards;
@@ -31,6 +32,7 @@ class KanbanBoardCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final locale = AppLocalizations.of(context)!;
     return Stack(
       children: <Widget>[
         BoardCard(
@@ -41,7 +43,7 @@ class KanbanBoardCard extends StatelessWidget {
               children: <Widget>[
                 _buildTitleColumn(),
                 _buildListItemsColumn(),
-                _buildButtonNewTask(index),
+                _buildButtonNewTask(index, locale.add_task),
               ],
             ),
           ),
@@ -107,7 +109,7 @@ class KanbanBoardCard extends StatelessWidget {
     );
   }
 
-  Widget _buildButtonNewTask(int index) {
+  Widget _buildButtonNewTask(int index, String title) {
     return ListTile(
       dense: true,
       onTap: () {
@@ -118,8 +120,8 @@ class KanbanBoardCard extends StatelessWidget {
         color: Colors.black45,
         size: 24.0,
       ),
-      title: const Text(
-        'Add Task',
+      title: Text(
+        title,
         style: TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.w600,

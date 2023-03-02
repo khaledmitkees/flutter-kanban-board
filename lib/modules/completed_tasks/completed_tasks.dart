@@ -55,7 +55,8 @@ class completedTasksList extends StatelessWidget {
                           fontWeight: FontWeight.w700,
                         ),
                       ),
-                      trailing: Text(historyList[index].endDate ?? ''));
+                      trailing: Text(
+                          "${historyList[index].startDate ?? ''} - ${historyList[index].endDate ?? ''}"));
                 },
                 separatorBuilder: (_, __) => const Divider(),
                 itemCount: historyList.length,

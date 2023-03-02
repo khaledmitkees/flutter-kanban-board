@@ -32,7 +32,7 @@ class TaskCard extends StatelessWidget {
     return LayoutBuilder(
       builder: (BuildContext _, BoxConstraints constraints) {
         return Container(
-          height: 50,
+          height: 60,
           clipBehavior: Clip.hardEdge,
           margin: const EdgeInsets.symmetric(vertical: 6.0),
           decoration: BoxDecoration(
@@ -78,6 +78,12 @@ class TaskCard extends StatelessWidget {
         title: TaskText(
           title: task.title,
         ),
+        subtitle: (task.startDate ?? "").isNotEmpty
+            ? Text(
+                " Start date: ${task.startDate ?? ""}",
+                style: TextStyle(color: Colors.white54),
+              )
+            : Text(""),
         trailing: InkWell(
           onTap: () => showModalBottomSheet(
             context: context,

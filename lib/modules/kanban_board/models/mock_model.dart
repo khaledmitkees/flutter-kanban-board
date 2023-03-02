@@ -6,24 +6,16 @@ class MockBoardsData {
     return List.from([
       Board(
         title: 'To Do',
-        children: [
-          Task(title: 'ToDo 1'),
-          Task(title: 'ToDo 2'),
-        ],
+        children: [],
       ),
-      Board(
-        title: 'In Progress',
-        children: [
-          Task(title: 'In progress 3'),
-        ],
-      ),
-      Board(
-        title: 'Done',
-        children: [
-          Task(title: 'Done 4'),
-          Task(title: 'Done 5'),
-        ],
-      ),
+      // Board(
+      //   title: 'In Progress',
+      //   children: [],
+      // ),
+      // Board(
+      //   title: 'Done',
+      //   children: [],
+      // ),
     ]);
   }
 }
