@@ -40,10 +40,6 @@ To run this project, you need to have:
 * Google Analytics 
 * Localization [en, de]
 
-## Screenshots
-| Screenshot | #1    | #2    | #3    | #4    | #5    | #6    |
-|:----------:| ![](../Simulator Screen Shot - iPhone 14 Pro - 2023-03-07 at 14.14.29.png) | ![](../Simulator Screen Shot - iPhone 14 Pro - 2023-03-07 at 14.14.37.png) |  | ![](../Simulator Screen Shot - iPhone 14 Pro - 2023-03-07 at 14.14.44.png) | ![](../Simulator Screen Shot - iPhone 14 Pro - 2023-03-07 at 14.14.52.png) | ![](../Simulator Screen Shot - iPhone 14 Pro - 2023-03-07 at 14.15.06.png)| ![](../Simulator Screen Shot - iPhone 14 Pro - 2023-03-07 at 14.15.00.png) |
-
 
 ## Architecture
 This application uses the bloc architecture pattern to manage state. The key components of the application's architecture include:
@@ -57,6 +53,13 @@ This application uses the bloc architecture pattern to manage state. The key com
 * [Flutter](https://flutter.dev/) - The framework used to build the application.
 * [Bloc](https://pub.dev/packages/bloc) - A state management library that implements the bloc pattern.
 * [Firebase](https://firebase.google.com/) - A free Google to with several services
+
+## Screenshots
+| | |
+| ------------- | ------------- |
+|![Simulator Screen Shot - iPhone 14 Pro - 2023-03-07 at 14 14 29](https://user-images.githubusercontent.com/42773250/223421466-313cfb61-0f64-4966-ac20-c61f6d7ef11c.png)| ![Simulator Screen Shot - iPhone 14 Pro - 2023-03-07 at 14 14 37](https://user-images.githubusercontent.com/42773250/223421513-ddd2c165-c280-47a6-94c6-61f21df14e89.png)
+| ![Simulator Screen Shot - iPhone 14 Pro - 2023-03-07 at 14 14 44](https://user-images.githubusercontent.com/42773250/223422719-42c06089-2ae6-4708-a0e3-39ea3bb046bd.png) | ![Simulator Screen Shot - iPhone 14 Pro - 2023-03-07 at 14 14 52](https://user-images.githubusercontent.com/42773250/223422798-b475e5fd-50dd-468a-ab57-719c2f7e4742.png)  |
+| ![Simulator Screen Shot - iPhone 14 Pro - 2023-03-07 at 14 15 00](https://user-images.githubusercontent.com/42773250/223422824-c3e3480c-bacb-4046-ad13-b76a2cf61b28.png)  | ![Simulator Screen Shot - iPhone 14 Pro - 2023-03-07 at 14 15 06](https://user-images.githubusercontent.com/42773250/223422853-fe4364b0-f230-47e2-9cdb-f23d4fa62e3a.png) |
 
 ## Author
 Khaled Mitkees
