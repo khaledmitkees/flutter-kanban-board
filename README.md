@@ -25,6 +25,7 @@ To run this project, you need to have:
    `flutter pub get`
 4. Run the app
    `flutter run`
+5. The app is connected to firebase for safety and authentication, it wont run unless in production mode.
 
 ## Features
 * Create new tasks with a title.
@@ -38,6 +39,11 @@ To run this project, you need to have:
 * Crashlytics 
 * Google Analytics 
 * Localization [en, de]
+
+## Screenshots
+| Screenshot | #1    | #2    | #3    | #4    | #5    | #6    |
+|:----------:| ![](../Simulator Screen Shot - iPhone 14 Pro - 2023-03-07 at 14.14.29.png) | ![](../Simulator Screen Shot - iPhone 14 Pro - 2023-03-07 at 14.14.37.png) |  | ![](../Simulator Screen Shot - iPhone 14 Pro - 2023-03-07 at 14.14.44.png) | ![](../Simulator Screen Shot - iPhone 14 Pro - 2023-03-07 at 14.14.52.png) | ![](../Simulator Screen Shot - iPhone 14 Pro - 2023-03-07 at 14.15.06.png)| ![](../Simulator Screen Shot - iPhone 14 Pro - 2023-03-07 at 14.15.00.png) |
+
 
 ## Architecture
 This application uses the bloc architecture pattern to manage state. The key components of the application's architecture include:
